@@ -22,7 +22,7 @@ frozenlist==1.4.1
 h11==0.14.0
 hexbytes==0.3.1
 httptools==0.6.1
-idna==3.6
+idna==3.7
 jsonschema==4.21.1
 jsonschema-specifications==2023.12.1
 lru-dict==1.2.0
