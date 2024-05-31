@@ -46,7 +46,7 @@ def get_internals_from_tx_traces_geth(calls):
             elif tx.get("value") is None and tx.get("type") == "STATICCALL":
                 pass
             else:
-                return [{"Error": f"Unhandled scenario in geth traces: {raw_traces}"}]
+                return [{"error": f"Unhandled scenario in geth traces: {raw_traces}"}]
 
             if value > 0:
                 internal_txs.append(
@@ -59,7 +59,7 @@ def get_internals_from_tx_traces_geth(calls):
                 )
         except Exception as e:
             logger.error(f"Getting traces from geth error: {str(e)}")
-            return [{"Error": f"Getting traces from geth error: {str(e)}"}]
+            return [{"error": f"Getting traces from geth error: {str(e)}"}]
 
     return internal_txs
 
